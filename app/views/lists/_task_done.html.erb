@@ -1,0 +1,6 @@
+<h1>skończone</h1>
+<% @lists_done.each do |list| %>
+  <ul class="text-success ">
+    <li><%= list.name %>|<%= list.point %>|<%= list.date_end %>|<%= link_to 'Destroy', list,class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  </ul>
+<% end %>

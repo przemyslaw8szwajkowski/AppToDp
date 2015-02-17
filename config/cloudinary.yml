@@ -1,0 +1,12 @@
+development:
+  cloud_name: crm
+  api_key: '182184286784677'
+  api_secret: dmQGGXyVYNZPZnYjNB3bRqyz8Bg
+production:
+  cloud_name: crm
+  api_key: '182184286784677'
+  api_secret: dmQGGXyVYNZPZnYjNB3bRqyz8Bg
+test:
+  cloud_name: crm
+  api_key: '182184286784677'
+  api_secret: dmQGGXyVYNZPZnYjNB3bRqyz8Bg

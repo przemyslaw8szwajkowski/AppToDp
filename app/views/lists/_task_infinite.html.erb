@@ -1,0 +1,8 @@
+<h1>Nie skończone</h1>
+<ul class="text-danger">
+<% @lists_infinite.each do |list| %>
+<li><%= list.name %>|<%= list.point %>|<%= list.date_end %>|
+      <%= link_to  "Finish", finish_path(list), class: "btn btn-info btn-xs", :method => :get  %>|
+      <%= link_to 'Destroy', list,class: "btn btn-danger btn-xs" , method: :delete, data: { confirm: 'Are you sure?' } %></li>
+  <% end %>
+</ul>
