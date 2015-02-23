@@ -18,7 +18,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'carrierwave-dropbox'
 gem 'carrierwave'
 gem 'cloudinary'
-gem 'whenever', :require => false
+gem 'whenever','~> 0.8.4', :require => false
 # end add gems
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

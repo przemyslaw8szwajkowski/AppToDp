@@ -18,6 +18,10 @@
 # end
 
 # Learn more: http://github.com/javan/whenever
+# set :environment, 'development'
+env :PATH, '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+set :output, {:error => 'error.log', :standard => 'cron.log'}
+# env :PATH, ENV['PATH']
 
 every 1.minutes do
   rake "task:false"
