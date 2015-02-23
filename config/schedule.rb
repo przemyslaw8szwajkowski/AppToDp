@@ -20,5 +20,5 @@
 # Learn more: http://github.com/javan/whenever
 
 every 1.minutes do
-  command "echo 'one' && echo 'two'"
+  rake "task:false"
 end
