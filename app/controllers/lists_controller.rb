@@ -74,6 +74,13 @@ class ListsController < ApplicationController
    redirect_to :action => "index"
   end
 
+  def sum_point
+   @user = User.find(params[:id])
+   @user_point = User.find(params[:id]).point 
+   @list_point = List.done.sum(:point).where(user_id: current_user.id) 
+   @user.update(:point =>@user_point + @list_point)
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_list
