@@ -2,25 +2,25 @@ class RegistrationsController < Devise::RegistrationsController
 private
   def sign_up_params
     params.require(:user).permit(:avatar,
-                                                :avatar_cache,
-                                                :name,
-                                                :surname,
-                                                :born,
-                                                :email,
-                                                :password,
-                                                :password_confirmation
-                                                )
+                                 :avatar_cache,
+                                 :name,
+                                 :surname,
+                                 :born,
+                                 :email,
+                                 :password,
+                                 :password_confirmation
+                                 )
   end
   def account_update_params
    params.require(:user).permit(:avatar,
-                                              :avatar_cache,
-                                              :name,
-                                              :surname,
-                                              :born,
-                                              :email,
-                                              :password,
-                                              :password_confirmation,
-                                              :current_password
-                                              )
+                                :avatar_cache,
+                                :name,
+                                :surname,
+                                :born,
+                                :email,
+                                :password,
+                                :password_confirmation,
+                                :current_password
+                                )
   end
 end

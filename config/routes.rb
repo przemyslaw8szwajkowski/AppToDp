@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
     resources :lists
   get '/lists/:id/finish', to: 'lists#finish', as: 'finish'
-
+  get '/lists/:id/sum_point', to: 'lists#sum_point', as: 'sum_point'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
