@@ -17,8 +17,10 @@ namespace :task do
 				user = User.find(id = u.id )
 				puts user_point = User.find(id = u.id).point 
 				puts list_point = List.joins(:user).where(:user_id => u.id).done.sum(:point)
-				# sum = user_point + list_point
-				# user.update(:point => sum )	
+				user_point.to_i
+				list_point.to_i
+				sum = user_point + list_point
+				user.update(:point => sum )	
 		end
 			puts "all task sum "
 	end
