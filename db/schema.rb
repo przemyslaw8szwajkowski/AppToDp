@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20150212150315) do
   add_index "lists", ["user_id"], name: "index_lists_on_user_id", using: :btree
 
   create_table "points", force: true do |t|
-    t.integer  "points"
+    t.integer  "points",     default: 0, null: false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -50,7 +50,7 @@ ActiveRecord::Schema.define(version: 20150212150315) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "point"
+    t.integer  "point",                  default: 0
     t.string   "avatar"
     t.string   "name"
     t.string   "surname"
