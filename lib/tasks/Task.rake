@@ -15,11 +15,12 @@ namespace :task do
 		task :sum => :environment do
 			User.find_each do |u|
 				user = User.find(id = u.id )
-				@user_point = User.find(id = u.id).point 
-				@list_point = List.joins(:user).where(:user_id => u.id).done.sum(:point)
-				user.update(:point =>@user_point + @list_point)
-				puts "all task sum "
+				user_point = User.find(id = u.id).point 
+				list_point = List.joins(:user).where(:user_id => u.id).done.sum(:point)
+				sum = user_point + list_point
+				user.update(:point => sum )	
 		end
+			puts "all task sum "
 	end
 
 		desc "task to doing"
