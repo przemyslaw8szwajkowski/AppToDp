@@ -23,7 +23,7 @@ namespace :task do
 	end
 
 		desc "task to doing"
-			task :do_task => [:sum,:true] do
+			task :do_task => [:environment,:sum,:true] do
 				puts "done :)"
 		end
 end
