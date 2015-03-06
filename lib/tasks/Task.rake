@@ -13,7 +13,8 @@ namespace :task do
 	
 	desc "sum all finished task "
 		task :sum => :environment do
-			User.find_each do |u|
+			# User.find_each do |u|
+			User.all.each do |u|
 				user = User.find(id = u.id )
 				puts user_point = User.find(id = u.id).point 
 				puts list_point = List.joins(:user).where(:user_id => u.id).done.sum(:point)
