@@ -39,7 +39,9 @@ GEM
     carrierwave-dropbox (1.2.1)
       carrierwave (~> 0.9)
       dropbox-sdk (~> 1.6)
-    chronic (0.10.2)
+    clockwork (1.1.0)
+      activesupport
+      tzinfo
     cloudinary (1.0.82)
       aws_cf_signer
       rest-client
@@ -150,9 +152,6 @@ GEM
       unicorn
     warden (1.2.3)
       rack (>= 1.0)
-    whenever (0.8.4)
-      activesupport (>= 2.3.4)
-      chronic (>= 0.6.3)
 
 PLATFORMS
   ruby
@@ -160,6 +159,7 @@ PLATFORMS
 DEPENDENCIES
   carrierwave
   carrierwave-dropbox
+  clockwork
   cloudinary
   coffee-rails (~> 4.0.0)
   devise
@@ -176,4 +176,3 @@ DEPENDENCIES
   uglifier (>= 1.3.0)
   unicorn
   unicorn-rails
-  whenever (~> 0.8.4)
