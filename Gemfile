@@ -19,6 +19,8 @@ gem 'carrierwave-dropbox'
 gem 'carrierwave'
 gem 'cloudinary'
 gem 'whenever','~> 0.8.4', :require => false
+gem 'rails_12factor', group: :production
+gem 'rack-timeout'
 # end add gems
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

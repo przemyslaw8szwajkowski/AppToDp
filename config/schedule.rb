@@ -19,10 +19,11 @@
 
 # Learn more: http://github.com/javan/whenever
 # set :environment, 'development'
-env :PATH, '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+# env :PATH, '/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'
+# config.autoload_paths += %W(#{config.root}/lib)
 set :output, {:error => 'error.log', :standard => 'cron.log'}
 # env :PATH, ENV['PATH']
 
 every 1.minutes do
-  rake "task:false"
+  rake "task:do_task"
 end
