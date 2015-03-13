@@ -17,8 +17,10 @@
 body
 {
 /*  background-image:url(http://i.imgur.com/dWsDBpV.png);*/
-/*    background-image:url(http://i.imgur.com/KCa8KHY.png);*/
-background-image: url("../background.jpg");
+/*    background-image:url(http://i.imgur.com/KCa8KHY.png);
+*/        background-image:url(http://www.patterncooler.com/#a168b168c3E8d190e0f0g64h11030AFCFEEE64073C3F0F1Ci68j30k64l1F4m1F4n1);
+    
+/*background-image: url("/assets/background.jpg");*/
 
   background-repeat:initial;
 }

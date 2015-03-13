@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'ranking/index'
+
   devise_for :users, :controllers => { registrations: 'registrations' }
     resources :lists
   get '/lists/:id/finish', to: 'lists#finish', as: 'finish'

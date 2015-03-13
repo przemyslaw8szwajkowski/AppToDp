@@ -1,6 +1,31 @@
 <h1>skończone</h1>
-<% @lists_done.each do |list| %>
-  <ul class="text-success ">
-    <li><%= list.name %>|<%= list.point %>|<%= list.date_end %>|<%= link_to 'Destroy', list,class: "btn btn-danger btn-xs", method: :delete, data: { confirm: 'Are you sure?' } %></li>
-  </ul>
+<!--dodane :)  -->
+ <% @lists_done.each do |list| %>
+ <div class="container">
+		<div class="row">
+			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+				<ul class="event-list">
+					<li>
+						<time datetime="2014-07-20">
+							<span class="day"><%= list.created_at.day%></span>
+							<span class="month"><%= list.created_at.strftime("%B")%></span>
+							<span class="year"><%= list.created_at.year%></span>
+						</time>
+						<div class="info">
+							<h2 class="title"><%= list.name %></h2>
+							<p class="desc">Get <%= list.point %> point</p>
+							<p class="desc"><%= link_to 'Destroy', list,class: "btn btn-danger btn-lg ", method: :delete, data: { confirm: 'Are you sure?' } %></p>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:50%;"></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:50%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+</div>
 <% end %>

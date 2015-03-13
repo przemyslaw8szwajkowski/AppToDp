@@ -1,8 +1,31 @@
 <h1>Nie skończone</h1>
-<ul class="text-danger">
-<% @lists_infinite.each do |list| %>
-<li><%= list.name %>|<%= list.point %>|<%= list.date_end %>|
-      <%= link_to  "Finish", finish_path(list), class: "btn btn-info btn-xs", :method => :get  %>|
-      <%= link_to 'Destroy', list,class: "btn btn-danger btn-xs" , method: :delete, data: { confirm: 'Are you sure?' } %></li>
-  <% end %>
-</ul>
+<!--dodane :)  -->
+ <% @lists_infinite.each do |list| %>
+ <div class="container">
+		<div class="row">
+			<div class="[ col-xs-12 col-sm-offset-2 col-sm-8 ]">
+				<ul class="event-list">
+					<li>
+						<time>
+							<span class="day"><%= list.created_at.day%></span>
+							<span class="month"><%= list.created_at.strftime("%B")%></span>
+							<span class="year"><%= list.created_at.year%></span>
+						</time>
+						<div class="info">
+							<h2 class="title"><%= list.name %></h2>
+							<p class="desc">Point to get <%= list.point %></p>
+							<p class="desc"><%= link_to  "Finish", finish_path(list), class: "btn btn-info btn-lg", :method => :get  %> <%= link_to 'Destroy', list,class: "btn btn-danger btn-lg ", method: :delete, data: { confirm: 'Are you sure?' } %></p>
+						</div>
+						<div class="social">
+							<ul>
+								<li class="facebook" style="width:50%;"></a></li>
+								<li class="twitter" style="width:34%;"><a href="#twitter"><span class="fa fa-twitter"></span></a></li>
+								<li class="google-plus" style="width:50%;"><a href="#google-plus"><span class="fa fa-google-plus"></span></a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+</div>
+<% end %>
