@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # get 'ranking/ranking'
   get 'ranking/index'
 
   devise_for :users, :controllers => { registrations: 'registrations' }

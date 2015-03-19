@@ -1,0 +1,13 @@
+<aside>
+	<table class="table">
+		<% @ranking.each_with_index do |ranking,index| %>
+			<tr>
+			<td><%= index + 1 %>
+				<li><td><% unless ranking.avatar_url.nil? %><%= image_tag(ranking.avatar_url(:display) ,class: "img-circle")%><% end %></td>
+				<td><%= ranking.name %></td>
+				<td><%= ranking.surname %></td>
+				<td><%= ranking.point %></td>
+			</tr>
+		<% end %>
+	</table>
+</aside>
